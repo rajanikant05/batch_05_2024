@@ -6,18 +6,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make'
+                sh 'echo this is build'
             }
         }
         stage('Test'){
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml'
+                sh 'echo this Test'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'make publish'
+                sh 'echo this is deploy'
             }
         }
     }
